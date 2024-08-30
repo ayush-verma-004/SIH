@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <script>
+        function showSuccessMessage(message) {
+            const successMessage = document.getElementById('success-message');
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <form action="/users/add" method="post" onsubmit="showSuccessMessage('Your registration is done!');">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" name="collegeName" required><br><br>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" required><br><br>
+
+        <label for="primarySkill">Primary Skill:</label>
+        <input type="text" id="primarySkill" name="primarySkill" required><br><br>
+
+        <label for="secondarySkill">Secondary Skill:</label>
+        <input type="text" id="secondarySkill" name="secondarySkill" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <div id="success-message" style="display:none; color: green; font-weight: bold;"></div>
+</body>
+</html>
