@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord-Like Interface with WhatsApp Features</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar for friends and committees -->
+    <div class="sidebar">
+      <div class="section-title">Friends</div>
+      <ul class="friends-list">
+        <li class="friend-item">Alice</li>
+        <li class="friend-item">Bob</li>
+        <li class="friend-item">Charlie</li>
+      </ul>
+      <div class="section-title">Committees</div>
+      <ul class="committees-list">
+        <li class="committee-item">Sports Club</li>
+        <li class="committee-item">Music Club</li>
+        <li class="committee-item">Tech Club</li>
+      </ul>
+      <div class="dark-mode-toggle">
+        <label for="dark-mode">Dark Mode</label>
+        <input type="checkbox" id="dark-mode">
+      </div>
+    </div>
+
+    <!-- Draggable Divider -->
+    <div class="divider" id="divider"></div>
+
+    <!-- Main chat area -->
+    <div class="chat-area">
+      <div class="chat-header">Chat with Friends</div>
+      <div class="chat-box">
+        <div class="message">Hello! How are you?</div>
+        <div class="message">I'm doing great, thanks!</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message..." id="message-input">
+        <input type="file" id="file-input" style="display: none;">
+        <button id="file-button">📎</button>
+        <button id="send-button">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
