@@ -1,0 +1,70 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-box {
+    background-color: #d3d3d3; /* Light grey background for header */
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-box h1 {
+    color: #fff;
+    display: inline;
+    margin-right: 10px;
+}
+
+.header-box .company-name {
+    color: #ffa500; /* Orange color for 'Bridge' */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #ffa500; /* Orange color for navigation links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: #ffa500; /* Orange button color */
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #e59400; /* Slightly darker orange on hover */
+}
+
+.search-results {
+    color: #333; /* Dark text color for readability */
+}
