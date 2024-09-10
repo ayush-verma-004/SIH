@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page</title>
+    <script>
+
+        function donateViaApp() {
+            const amount = document.getElementById('amount').value;
+            if (!amount) {
+                alert("Please enter an amount");
+                return;
+            }
+            const upiLink = `upi://pay?pa=ayushverma593773-2@oksbi&pn=Ayush Verma&am=${amount}&cu=INR`;
+            window.location.href = upiLink; 
+        }
+
+        async function showQRCode() {
+            const amount = document.getElementById('amount').value;
+            if (!amount) {
+                alert("Please enter an amount");
+                return;
+            }
+
+            const response = await fetch(`/generateQR?amount=${amount}`);
+            const qrImage = await response.text();
+            document.getElementById('qrCode').src = `data:image/png;base64,${qrImage}`;
+            document.getElementById('qrCode').style.display = 'block'; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Donate</h1>
+    <label for="amount">Enter Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount" required>
+    <br><br>
+
+    <button onclick="showQRCode()">Scan UPI QR Code</button>
+    <br><br>
+
+    <img id="qrCode" alt="UPI QR Code" style="display: none; border: 1px solid black;"/>
+    <br><br>
+
+    <button onclick="donateViaApp()">Donate via Payment App</button>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBridge - Donation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="edu">Edu</span><span class="bridge">Bridge</span>
+        </div>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discuss</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="top-section">
+        <div class="central-message">
+            <h1>Your Donation Transforms Lives</h1>
+            <button class="donation-button" onclick="openDonationModal()">Donate Now</button>
+        </div>
+    </section>
+
+    <section id="bottom-section">
+        <div class="info-box" id="box1">
+            <h2>Where Your Money Goes</h2>
+            <p>Your donations support education programs, scholarships, and resources for students in need.</p>
+        </div>
+        <div class="info-box" id="box2">
+            <h2>How We Ensure Transparency</h2>
+            <p>We use secure systems to track donations and ensure every dollar reaches the intended cause.</p>
+        </div>
+        <div class="info-box" id="box3">
+            <h2>Amount Donated So Far</h2>
+            <p>Total donations: $<span id="donation-amount">12,345</span></p>
+        </div>
+    </section>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDonationModal()">&times;</span>
+            <h2>Make a Donation</h2>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount" />
+            <button class="payment-button" onclick="showQRCode()">Pay via QR Scanner</button>
+            <img id="qrCode" alt="UPI QR Code" style="display: none; border: 1px solid black;"/>
+            <!-- <br><br> -->
+            <button class="payment-button" onclick="donateViaApp()">Pay via Payment App</button>
+        </div>
+    </div>
+
+    <section id="thank-you-section">
+        <p>Thank you for your generous contributions. Every donation makes a difference!</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
